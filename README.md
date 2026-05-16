@@ -37,12 +37,13 @@ pyinstaller --onefile --name="情境默写生成器" 情境默写题目生成器
 
 2.在项目根目录创建config.json文件，内容如下：
 
-json
-{
+
+
   "deepseek_api_key": "your_api_key_here",
   "knowledge_base_path": "knowledge_base.json",
   "default_output_dir": "./output"
-}
+
+
 
 将your_api_key_here替换为您的DeepSeek API密钥。
 
