@@ -23,7 +23,11 @@
 
 三、打包为可执行文件
 
-可以使用PyInstaller将程序打包为独立的可执行文件：
+1.安装依赖
+
+pip install -r requirements.txt
+
+2.可以使用PyInstaller将程序打包为独立的可执行文件：
 
 pyinstaller --onefile --name="情境默写生成器" 情境默写题目生成器.py
 
@@ -31,7 +35,16 @@ pyinstaller --onefile --name="情境默写生成器" 情境默写题目生成器
 
 1.将生成的情境默写生成器.exe和config.json放在同一目录
 
-2.编辑config.json配置API密钥
+2.在项目根目录创建config.json文件，内容如下：
+
+json
+{
+  "deepseek_api_key": "your_api_key_here",
+  "knowledge_base_path": "knowledge_base.json",
+  "default_output_dir": "./output"
+}
+
+将your_api_key_here替换为您的DeepSeek API密钥。
 
 3.双击运行情境默写生成器.exe
 
